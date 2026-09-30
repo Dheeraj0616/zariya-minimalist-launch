@@ -1,0 +1,17 @@
+{
+  "name": "The Zariya",
+  "short_name": "Zariya",
+  "description": "Three disciplines, one Zariya — Academy, Consulting, Architecture.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfbf9",
+  "theme_color": "#fbfbf9",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
