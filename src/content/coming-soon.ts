@@ -13,9 +13,9 @@ export type ComingSoonContent = {
 };
 
 export const consultingSoon: ComingSoonContent = {
-  title: "Consulting — Launching Soon | The Zariya",
+  title: "Consulting — Launching Soon | Zariya",
   name: "Consulting",
-  eyebrow: "The Zariya Consulting",
+  eyebrow: "Zariya Consulting",
   teaser:
     "Sharper ways to show what you build, from interactive 3D product experiences to fast, high-information formats that make materials and specs clear at a glance.",
   metaDescription:
@@ -24,9 +24,9 @@ export const consultingSoon: ComingSoonContent = {
 };
 
 export const architectureSoon: ComingSoonContent = {
-  title: "Architecture — Launching Soon | The Zariya",
+  title: "Architecture — Launching Soon | Zariya",
   name: "Architecture",
-  eyebrow: "The Zariya Architecture",
+  eyebrow: "Zariya Architecture",
   teaser:
     "Every project begins with a conversation. We listen first, then decide, together, if it's the right fit.",
   metaDescription:

@@ -2,10 +2,10 @@
 
 export const home = {
   hero: {
-    eyebrow: "The Zariya",
-    heading: "Three disciplines. One Zariya.",
+    eyebrow: "Zariya",
+    heading: "Many crafts. One house.",
     subhead:
-      "Consulting for entrepreneurs, architecture, and an academy that trains the next generation of craft, starting with coffee.",
+      "Zariya is one house with several branches. The first is open: an academy that trains baristas through its Barista Method. Consulting and architecture are on their way.",
     primaryCta: { label: "Explore the Academy", href: "/academy" },
     secondaryCta: { label: "See what's coming", href: "#verticals" },
   },
@@ -16,7 +16,7 @@ export const home = {
       name: "Academy",
       badge: "Applications open",
       teaser:
-        "A selective Barista course, reviewed personally. Applications are open now, and we call every applicant within 48 hours.",
+        "Our Barista Method course teaches you how to become a barista properly — hands-on, selective, and reviewed personally. We call every applicant within 48 hours.",
       cta: { label: "Apply now", href: "/academy#apply" },
       facts: [
         { label: "Duration", value: "[PLACEHOLDER: course duration]" },
@@ -43,9 +43,9 @@ export const home = {
   },
   spotlight: {
     eyebrow: "Now live",
-    heading: "The Academy's first course",
+    heading: "The Barista Method course",
     teaser:
-      "Barista training built for people who want to do the work properly — hands-on, reviewed personally, and taught in small cohorts.",
+      "Training built for people who want to do the work properly — hands-on, reviewed personally, and taught in small cohorts.",
     tiles: [
       {
         title: "Hands-on training",
@@ -94,7 +94,7 @@ export const home = {
   },
   finalCta: {
     heading: "Start where the craft starts.",
-    body: "Applications for the Barista course are open. Reviewed personally, answered within 48 hours.",
-    cta: { label: "Apply to Academy", href: "/academy#apply" },
+    body: "Applications for the Barista Method course are open. Reviewed personally, answered within 48 hours.",
+    cta: { label: "Apply to the Academy", href: "/academy#apply" },
   },
 } as const;

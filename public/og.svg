@@ -3,8 +3,8 @@
   <line x1="90" y1="200" x2="1110" y2="200" stroke="#e3e0d8" stroke-width="1"/>
   <line x1="90" y1="430" x2="1110" y2="430" stroke="#e3e0d8" stroke-width="1"/>
   <text x="90" y="150" font-family="Georgia, serif" font-size="24" letter-spacing="14" fill="#57544c">ZARIYA</text>
-  <text x="90" y="330" font-family="Georgia, serif" font-size="76" fill="#1c1c1a">Three disciplines.</text>
-  <text x="90" y="415" font-family="Georgia, serif" font-size="76" fill="#1c1c1a">One Zariya.</text>
+  <text x="90" y="330" font-family="Georgia, serif" font-size="76" fill="#1c1c1a">Many crafts.</text>
+  <text x="90" y="415" font-family="Georgia, serif" font-size="76" fill="#1c1c1a">One house.</text>
   <text x="90" y="500" font-family="Helvetica, Arial, sans-serif" font-size="22" fill="#57544c">Academy · Consulting · Architecture</text>
   <rect x="90" y="560" width="64" height="4" fill="#9a1b1e"/>
   <text x="1020" y="590" font-family="Helvetica, Arial, sans-serif" font-size="16" fill="#8a877e" text-anchor="end">thezariya.com</text>

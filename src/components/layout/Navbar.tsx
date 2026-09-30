@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink as RouterNavLink, useLocation } from "react-router";
 import { Menu } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -13,11 +14,13 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { navLinks, site } from "@/content/site";
 import { trackEvent } from "@/lib/analytics";
+import logoMark from "@/assets/logo-mark.svg";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { isAuthenticated, isLoading } = useAuth();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -46,9 +49,19 @@ export function Navbar() {
       >
         <Link
           to="/"
-          className="font-display text-sm font-medium tracking-[0.35em] text-foreground"
+          className="flex items-center gap-3"
+          aria-label="Zariya — home"
         >
-          {site.wordmark}
+          <img
+            src={logoMark}
+            alt=""
+            width={30}
+            height={30}
+            className="size-[30px] rounded-full"
+          />
+          <span className="font-display text-sm font-medium tracking-[0.35em] text-foreground">
+            {site.wordmark}
+          </span>
         </Link>
 
         {/* Desktop links */}
@@ -99,10 +112,26 @@ export function Navbar() {
           )}
         </div>
 
-        <div className="hidden md:block">
-          <Button asChild size="sm" className="h-10 rounded-md px-4 text-sm">
-            <Link to="/academy#apply">Apply to Academy</Link>
-          </Button>
+        <div className="hidden items-center gap-3 md:flex">
+          {isLoading ? null : isAuthenticated ? (
+            <Button asChild size="sm" className="h-10 rounded-md px-4 text-sm">
+              <Link to="/dashboard">My dashboard</Link>
+            </Button>
+          ) : (
+            <>
+              <Button
+                asChild
+                variant="ghost"
+                size="sm"
+                className="h-10 rounded-md px-3 text-sm"
+              >
+                <Link to="/auth">Sign in</Link>
+              </Button>
+              <Button asChild size="sm" className="h-10 rounded-md px-4 text-sm">
+                <Link to="/academy#apply">Apply to Academy</Link>
+              </Button>
+            </>
+          )}
         </div>
 
         {/* Mobile menu */}
@@ -120,7 +149,8 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-full max-w-xs border-l p-0">
               <SheetHeader className="border-b px-6 py-5">
-                <SheetTitle className="font-display text-sm tracking-[0.35em]">
+                <SheetTitle className="flex items-center gap-3 font-display text-sm tracking-[0.35em]">
+                  <img src={logoMark} alt="" className="size-7 rounded-full" />
                   {site.wordmark}
                 </SheetTitle>
               </SheetHeader>
@@ -149,10 +179,25 @@ export function Navbar() {
                     ) : null}
                   </RouterNavLink>
                 ))}
-                <div className="mt-4 px-1">
-                  <Button asChild className="h-12 w-full text-sm">
-                    <Link to="/academy#apply">Apply to Academy</Link>
-                  </Button>
+                <div className="mt-4 space-y-2 px-1">
+                  {isLoading ? null : isAuthenticated ? (
+                    <Button asChild className="h-12 w-full text-sm">
+                      <Link to="/dashboard">My dashboard</Link>
+                    </Button>
+                  ) : (
+                    <>
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="h-12 w-full text-sm"
+                      >
+                        <Link to="/auth">Sign in</Link>
+                      </Button>
+                      <Button asChild className="h-12 w-full text-sm">
+                        <Link to="/academy#apply">Apply to Academy</Link>
+                      </Button>
+                    </>
+                  )}
                 </div>
               </div>
             </SheetContent>

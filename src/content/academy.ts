@@ -5,9 +5,9 @@
 
 export const academy = {
   hero: {
-    eyebrow: "The Zariya Academy",
-    heading: "Barista Course",
-    tagline: "[PLACEHOLDER: one-line course tagline]",
+    eyebrow: "Zariya Academy",
+    heading: "Barista Method",
+    tagline: "The course that teaches you how to become a barista.",
     subline:
       "Applications are reviewed personally. We'll call you within 48 hours.",
     cta: { label: "Apply now", href: "#apply" },
@@ -16,7 +16,7 @@ export const academy = {
     eyebrow: "Course overview",
     heading: "What this course is",
     what:
-      "A selective, application-based Barista course for people who want to work in specialty coffee properly — from dialling in espresso to running a calm, precise bar during service.",
+      "A selective, application-based course in the Barista Method — how to become a barista and do the work properly, from dialling in espresso to running a calm, precise bar during service.",
     who: "For aspiring baristas and hospitality newcomers. No prior experience required — just the willingness to be trained, corrected, and to practise until it's second nature.",
     facts: [
       { label: "Duration", value: "[PLACEHOLDER: e.g. X weeks]" },
@@ -92,7 +92,7 @@ export const academy = {
   },
   form: {
     eyebrow: "Application",
-    heading: "Apply to the Barista Course",
+    heading: "Apply to the Barista Method course",
     intro:
       "Tell us who you are and why coffee. We read every application and call within 48 hours.",
   },

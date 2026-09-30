@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 96.81 96.81"><rect width="96.81" height="96.81" rx="18"/><g fill="#fff"><rect x="24.67" y="24.67" width="47.47" height="11.87"/><rect x="24.67" y="36.54" width="11.87" height="35.61"/><rect x="40.06" y="39.98" width="23.74" height="11.87"/><rect x="40.06" y="51.85" width="11.87" height="20.3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#111111"/>
+  <circle cx="256" cy="216" r="132" fill="none" stroke="#ffffff" stroke-width="20" stroke-dasharray="24 10"/>
+  <g stroke="#ffffff" stroke-width="12" fill="none">
+    <rect x="196" y="156" width="120" height="120" transform="rotate(45 256 216)"/>
+    <rect x="221" y="181" width="70" height="70" transform="rotate(45 256 216)"/>
+    <path d="M256 116 L256 156 M256 276 L256 316 M176 216 L216 216 M296 216 L336 216"/>
+    <path d="M256 186 L281 216 L256 246 L231 216 Z"/>
+  </g>
+  <text x="256" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="52" letter-spacing="18" fill="#ffffff">ZARIYA</text>
+</svg>

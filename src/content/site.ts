@@ -4,11 +4,11 @@
  */
 
 export const site = {
-  name: "The Zariya",
+  name: "Zariya",
   wordmark: "ZARIYA",
-  tagline: "Three disciplines. One Zariya.",
+  tagline: "Many crafts. One house.",
   description:
-    "An academy for craft, consulting for entrepreneurs, and a selective architecture studio. Starting with coffee.",
+    "Zariya brings disciplines together under one roof — starting with the Zariya Academy and its Barista Method course.",
   url: "https://thezariya.com",
 } as const;
 
@@ -27,7 +27,7 @@ export const navLinks: NavLink[] = [
 
 export const footer = {
   brandLine:
-    "Three disciplines under one roof — an academy for craft, consulting for entrepreneurs, and a selective architecture studio.",
+    "Zariya is a house of many crafts — an academy that trains baristas through its Barista Method, with consulting and architecture on the way.",
   verticals: [
     { label: "Academy", href: "/academy", soon: false },
     { label: "Consulting", href: "/consulting", soon: true },
@@ -35,7 +35,7 @@ export const footer = {
   ],
   contact: {
     // TODO: replace placeholders with real contact details.
-    email: "[PLACEHOLDER: hello@thezariya.com]",
+    email: "[PLACEHOLDER: hello@zariya.in]",
     phone: "[PLACEHOLDER: +91 XXXXX XXXXX (phone / WhatsApp)]",
     location: "[PLACEHOLDER: City, India]",
   },
@@ -45,5 +45,5 @@ export const footer = {
     { label: "LinkedIn", href: "[PLACEHOLDER: LinkedIn URL]" },
     { label: "X (Twitter)", href: "[PLACEHOLDER: X URL]" },
   ],
-  copyright: `© ${new Date().getFullYear()} The Zariya`,
+  copyright: `© ${new Date().getFullYear()} Zariya`,
 } as const;

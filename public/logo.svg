@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 96.81 96.81"><rect width="96.81" height="96.81" rx="18"/><g fill="#fff"><rect x="24.67" y="24.67" width="47.47" height="11.87"/><rect x="24.67" y="36.54" width="11.87" height="35.61"/><rect x="40.06" y="39.98" width="23.74" height="11.87"/><rect x="40.06" y="51.85" width="11.87" height="20.3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#111111"/>
+  <!-- chain ring -->
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#ffffff" stroke-width="26" stroke-dasharray="30 12"/>
+  <!-- knot emblem: outer rotated square -->
+  <g stroke="#ffffff" stroke-width="14" fill="none" stroke-linejoin="miter">
+    <rect x="176" y="176" width="160" height="160" transform="rotate(45 256 256)"/>
+    <rect x="206" y="206" width="100" height="100" transform="rotate(45 256 256)"/>
+    <!-- interlocking arms -->
+    <path d="M256 150 L256 200 M256 312 L256 362 M150 256 L200 256 M312 256 L362 256"/>
+    <!-- inner diamond stem -->
+    <path d="M256 216 L286 256 L256 296 L226 256 Z"/>
+  </g>
+</svg>

@@ -60,6 +60,16 @@ const schema = defineSchema(
     })
       .index("by_course_and_email", ["course_slug", "email"])
       .index("by_status", ["status"]),
+
+    // Customer↔team conversation threads, one per application (course + email).
+    // Queries are auth-gated: customers see their own thread, the team sees all.
+    messages: defineTable({
+      application_id: v.id("academyApplications"),
+      sender: v.union(v.literal("customer"), v.literal("team")),
+      body: v.string(),
+      read_by_team: v.optional(v.boolean()),
+      read_by_customer: v.optional(v.boolean()),
+    }).index("by_application", ["application_id"]),
   },
   {
     schemaValidation: false,

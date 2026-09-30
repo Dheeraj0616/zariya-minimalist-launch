@@ -16,6 +16,7 @@ const Consulting = lazy(() => import("./pages/Consulting.tsx"));
 const Architecture = lazy(() => import("./pages/Architecture.tsx"));
 const AuthPage = lazy(() => import("./pages/Auth.tsx"));
 const Dashboard = lazy(() => import("./pages/Dashboard.tsx"));
+const Admin = lazy(() => import("./pages/Admin.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 // Simple loading fallback for route transitions
@@ -30,39 +31,45 @@ function RouteLoading() {
 /** Per-route document title + meta description (SPA equivalent of per-page metadata). */
 const routeMeta: Record<string, { title: string; description: string }> = {
   "/": {
-    title: "The Zariya — Three disciplines. One Zariya.",
+    title: "Zariya — Many crafts. One house.",
     description:
-      "An academy for craft, consulting for entrepreneurs, and a selective architecture studio. Applications open for the Barista course.",
+      "Zariya brings disciplines together under one roof — starting with the Zariya Academy and its Barista Method course. Applications are open.",
   },
   "/academy": {
-    title: "Barista Course — The Zariya Academy",
+    title: "Barista Method Course — Zariya Academy",
     description:
-      "A selective, application-based Barista course. Apply now — every application is reviewed personally and we call within 48 hours.",
+      "A selective, application-based Barista Method course. Apply now — every application is reviewed personally and we call within 48 hours.",
   },
   "/consulting": {
-    title: "Consulting — Launching Soon | The Zariya",
+    title: "Consulting — Launching Soon | Zariya",
     description:
-      "The Zariya Consulting is launching online soon — interactive 3D product experiences and high-information formats for entrepreneurs.",
+      "Zariya Consulting is launching online soon — interactive 3D product experiences and high-information formats for entrepreneurs.",
   },
   "/architecture": {
-    title: "Architecture — Launching Soon | The Zariya",
+    title: "Architecture — Launching Soon | Zariya",
     description:
-      "The Zariya Architecture is launching online soon — a selective studio that listens first.",
+      "Zariya Architecture is launching online soon — a selective studio that listens first.",
   },
   "/auth": {
-    title: "Sign in — The Zariya",
-    description: "Sign in to The Zariya.",
+    title: "Sign in — Zariya",
+    description: "Sign in to your Zariya account.",
   },
   "/dashboard": {
-    title: "Applications — The Zariya",
-    description: "Review Academy applications.",
+    title: "My dashboard — Zariya",
+    description: "Your applications, messages and payments, in one place.",
+  },
+  "/admin": {
+    title: "Applications — Zariya Team",
+    description: "Review Academy applications and reply to messages.",
   },
 };
 
 function MetadataSync() {
   const location = useLocation();
   useEffect(() => {
-    const base = location.pathname.split("/")[1] ? `/${location.pathname.split("/")[1]}` : "/";
+    const base = location.pathname.split("/")[1]
+      ? `/${location.pathname.split("/")[1]}`
+      : "/";
     const meta = routeMeta[base] ?? routeMeta["/"];
     document.title = meta.title;
     let desc = document.querySelector('meta[name="description"]');
@@ -182,6 +189,14 @@ createRoot(document.getElementById("root")!).render(
                 element={
                   <RequireAuth>
                     <Dashboard />
+                  </RequireAuth>
+                }
+              />
+              <Route
+                path="/admin"
+                element={
+                  <RequireAuth>
+                    <Admin />
                   </RequireAuth>
                 }
               />

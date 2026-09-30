@@ -43,7 +43,7 @@ function shell(title: string, bodyHtml: string): string {
             </tr>
             <tr>
               <td style="padding:0 32px 28px;font-family:Helvetica,Arial,sans-serif;color:#8a877e;font-size:12px;line-height:1.6;">
-                The Zariya · [PLACEHOLDER: address] · India
+                Zariya · [PLACEHOLDER: address] · India
               </td>
             </tr>
           </table>
@@ -62,7 +62,7 @@ export function applicantConfirmationEmail(
   const html = shell(
     "Application received",
     `<p style="margin:0 0 16px;">Hi ${escapeHtml(firstName)},</p>
-     <p style="margin:0 0 16px;">Your application to <strong>The Zariya Academy — Barista Course</strong> has been received.</p>
+     <p style="margin:0 0 16px;">Your application to <strong>Zariya Academy — Barista Method course</strong> has been received.</p>
      <p style="margin:0 0 16px;">Our team reviews every application personally, and you can expect a call <strong>within 48 hours</strong> on the number you shared.</p>
      <div style="margin:24px 0;padding:14px 18px;border-left:3px solid #9a1b1e;background:#faf9f6;">
        <div style="font-size:12px;letter-spacing:0.12em;color:#8a877e;text-transform:uppercase;">Reference</div>
@@ -72,7 +72,7 @@ export function applicantConfirmationEmail(
   );
   const text = `Hi ${firstName},
 
-Your application to The Zariya Academy — Barista Course has been received.
+Your application to Zariya Academy — Barista Method course has been received.
 
 Our team reviews every application personally, and you can expect a call within 48 hours on the number you shared.
 
@@ -80,7 +80,7 @@ Reference: ${data.ref}
 
 — The Zariya team`;
   return {
-    subject: "Application received — The Zariya Academy",
+    subject: "Application received — Zariya Academy",
     html,
     text,
   };
