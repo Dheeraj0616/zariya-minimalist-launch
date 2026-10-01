@@ -14,7 +14,7 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { navLinks, site } from "@/content/site";
 import { trackEvent } from "@/lib/analytics";
-import logoMark from "@/assets/logo-mark.svg";
+import logoMark from "@/assets/logo-mark.jpg";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);

@@ -9,7 +9,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
-import logoMark from "@/assets/logo-mark.svg";
+import logoMark from "@/assets/logo-mark.jpg";
 
 const STATUS_COPY: Record<
   string,

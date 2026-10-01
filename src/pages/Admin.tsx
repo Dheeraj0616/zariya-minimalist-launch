@@ -16,7 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import logoMark from "@/assets/logo-mark.svg";
+import logoMark from "@/assets/logo-mark.jpg";
 
 const STATUS_OPTIONS = [
   "all",
